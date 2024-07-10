@@ -242,7 +242,7 @@ rpcserverport = 8001
 zookeeperip = 127.0.0.1  
 #port port number of the zk
 zookeeperport = 2181
-Worker thread for #modu
+#Worker thread for moduo
 workerthread =4
 ```
 测试
