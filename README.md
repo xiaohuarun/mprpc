@@ -54,5 +54,12 @@ After installing the dependencies, clone the project repository and run the buil
 git clone git@github.com:xiaohuarun/mprpc.git
 ./autobuild.sh
  ```
-### tip:If you can't link to zookeeper's dynamic libraries, go to /usr/local/lib, check the name of the library that reported the error, and then add it to your system environment variables.
+##### tip
+**If you can't link to zookeeper's dynamic libraries, go to /usr/local/lib, check the name of the library that reported the error, and then add it to your system environment variables.**
+
+# Framework Design
+**Design Concept**
+Protobuf already provides a code framework for RPC service method invocation, eliminating the need to implement a service interface description. The focus is on RPC service management and the RPC communication process. Additionally, Protobuf uses binary serialization for more efficient communication. Therefore, the initial framework design based on Protobuf is as follows: the blue color within the RPC service indicates the components already provided by Protobuf, and the RPC framework is built upon these components.
+
+![RPC Framework Design](https://github.com/xiaohuarun/mprpc/blob/main/image/rpc.jpg)
 
