@@ -16,18 +16,18 @@ Install Dependencies
 $ sudo apt-get install autoconf automake libtool curl make g++
 $ git clone git@github.com:protocolbuffers/protobuf.git
 $ cd protobuf
-$ ./autogen.sh               # 自动生成 configure 配置文件
-$ ./configure                # 配置编译环境
-$ make -j32                  # 编译
-$ sudo make install     	 # 拷贝头文件，安装库文件
-$ sudo ldconfig              # 刷新系统可用动态库
+$ ./autogen.sh               
+$ ./configure               
+$ make -j32                 
+$ sudo make install     	 
+$ sudo ldconfig              
 ```
 - ZooKeeper
 ```bash
  $ sudo apt-get install default-jre
 $ git clone git@github.com:apache/zookeeper.git
 $ cd zookeeper/conf
-$ cp zoo_sample.cfg zoo.cfg  # zookeeper 配置文件
+$ cp zoo_sample.cfg zoo.cfg  
 $ vim zoo.cfg                # 更改 dataDir=[你的存储路径]
 $ cd ../bin
 $ ./zkServer.sh start        # 启动 zookeeper 服务器
@@ -39,17 +39,20 @@ $ sudo make -j32
 $ sudo make install
 ```
 - Muduo
-   ```bash
+```bash
 git clone https://github.com/chenshuo/muduo.git
 cd muduo
 mkdir build && cd build
 cmake ..
 make
 sudo make install
-    ```
+```
 
-    ```bash
-    git clone git@github.com:xiaohuarun/mprpc.git
-    ./autobuild.sh
-    ```
+After installing the dependencies, clone the project repository and run the build script:The generated header files and dynamic libraries will be placed in the lib directory.
+
+```bash
+git clone git@github.com:xiaohuarun/mprpc.git
+./autobuild.sh
+ ```
+### tip:If you can't link to zookeeper's dynamic libraries, go to /usr/local/lib, check the name of the library that reported the error, and then add it to your system environment variables.
 
