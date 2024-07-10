@@ -248,9 +248,7 @@ workerthread =4
 测试
 ```c++
 $ cd bin
-# rpc 服务提供方
 $ ./rpcserver -i example.conf
-# rpc 服务调用方
 $ ./client -i example.conf
 ```
 
