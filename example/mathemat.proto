@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package math;
+
+option cc_generic_services=true ;
+
+message AddNum
+{
+    int32 num_first =1;
+    int32 num_sencond =2;
+}
+message resultNum
+{
+    int32 num_result = 1;
+}
+
+service addition
+{
+    rpc GetAdd(AddNum) returns (resultNum);
+}
