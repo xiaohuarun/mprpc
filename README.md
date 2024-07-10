@@ -12,7 +12,7 @@ you can opt not to use ZooKeeper.
 Install Dependencies
 
 - Protobuf
-   ```bash
+```bash
 $ sudo apt-get install autoconf automake libtool curl make g++
 $ git clone git@github.com:protocolbuffers/protobuf.git
 $ cd protobuf
@@ -21,7 +21,7 @@ $ ./configure                # 配置编译环境
 $ make -j32                  # 编译
 $ sudo make install     	 # 拷贝头文件，安装库文件
 $ sudo ldconfig              # 刷新系统可用动态库
-   ```
+```
 - ZooKeeper
 ```bash
  $ sudo apt-get install default-jre
