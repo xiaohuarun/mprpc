@@ -217,4 +217,40 @@ int main(int argc, char **argv) {
 }
 ```
 
+Here is the formatted Markdown text for your content:
+
+Mathematical Journal
+You can use 4 types of log messages. Log File Naming Format:
+```c++
+#include "logger.h"
+
+int a = 2024;
+std::string log = "hello, world!";
+
+LOG_DEBUG(" log debug: %d, %s", a, log);
+LOG_INFO(" log info: %d, %s", a, log);
+LOG_ERROR(" log error: %d, %s", a, log);
+LOG_FATAL(" log fatal: %d, %s", a, log);
+```
+The format of the configuration file, with five configuration parameters, is as follows
+```txt
+# rpc node ip address
+rpcserverip=127.0.0.1        
+# port port number of the rpc node
+rpcserverport = 8001
+# ip address of the zk
+zookeeperip = 127.0.0.1  
+#port port number of the zk
+zookeeperport = 2181
+Worker thread for #modu
+workerthread =4
+```
+测试
+```c++
+$ cd bin
+# rpc 服务提供方
+$ ./rpcserver -i example.conf
+# rpc 服务调用方
+$ ./client -i example.conf
+```
 
